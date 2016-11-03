@@ -1,0 +1,59 @@
+{
+  "name": "restovers",
+  "version": "0.0.1",
+  "description": "A simple API for fetching Gousto recipes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "npm run test:code && npm run test:lint",
+    "test:code": "mocha './**/*Spec.js' --reporter list",
+    "test:integration": "mocha './integration-tests/**/*Spec.js' --reporter list",
+    "test:unit": "mocha './app/**/__tests__/*Spec.js' --reporter list",
+    "test:lint": "standard | standard-reporter --stylish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evenius/restovers.git"
+  },
+  "author": "Jonathan Gill",
+  "license": "GPL 3",
+  "bugs": {
+    "url": "https://github.com/evenius/restovers/issues"
+  },
+  "homepage": "https://github.com/evenius/restovers#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "csv": "^1.1.0",
+    "csv-parse": "^1.1.7",
+    "express": "^4.14.0",
+    "extendable-immutable": "^1.3.0",
+    "fast.js": "^0.1.1",
+    "immutable": "^3.8.1",
+    "lodash.pick": "^4.4.0",
+    "moment": "^2.15.2",
+    "nedb": "^1.8.0",
+    "slug": "^0.9.1",
+    "validate.js": "^0.10.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.17.6",
+    "standard": "^8.5.0",
+    "standard-reporter": "^1.0.5",
+    "supertest": "^2.0.1"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "context",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect"
+    ]
+  }
+}
